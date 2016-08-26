@@ -1,0 +1,28 @@
+{
+  "name": "mongocheerio",
+  "version": "1.0.0",
+  "description": "webscraper",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhino15/mongoCheerio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhino15/mongoCheerio/issues"
+  },
+  "homepage": "https://github.com/rhino15/mongoCheerio#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.5.10",
+    "morgan": "^1.7.0",
+    "request": "^2.74.0"
+  }
+}
