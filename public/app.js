@@ -53,12 +53,8 @@ $(document).on('click', '#deletenote', function() {
 	var thisId = $(this).attr('data-id');
 
 	$.ajax({
-		method: 'GET', 
-		url: "/articles/" + thisId,
-		data: {
-			title: $('#titleinput').val(),
-			body: $('#bodyinput').val()
-		}
+		method: 'DELETE', 
+		url: "/notes/" + thisId
 	})
 
 	.done(function(data) {

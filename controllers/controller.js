@@ -88,14 +88,22 @@ router.post('/articles/:id', function(req, res) {
 	});
 });
 
-router.get('/delete', function(req, res) {
-	var note = Note()
-	Article.findOneAndRemove({"_id": req.params.id}, {'note': ""})
-	.exec(function(err, removed) {
+router.delete('/notes/:articleId', function(req, res) {
+	var articleId = req.params.articleId;
+	console.log(1, articleId);
+	Article.findOneAndUpdate({"_id": mongoose.Types.ObjectId(articleId)}, {$set: {'note': undefined}}, function(err, result) {
 		if (err) {
 			throw err;
 		} else {
-			res.send(removed);
+			console.log(2, result);
+			Note.remove({_id: result.note}).exec(function(err, result){
+				if (err) {
+					throw err;
+				} else {
+					console.log(3, result)
+					res.send(200);
+				}
+			})
 		}
 	});
 });
