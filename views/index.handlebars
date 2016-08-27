@@ -1,0 +1,67 @@
+<style>
+    body{
+    /*background-color: #DECADE*/
+    background-color: #2A2C2B;
+    }
+
+    .jumbotron {
+      background-color: #FFD950;
+    }
+
+    #moreSpace {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #FFD950;
+    }
+    #articles{
+    height:500px;
+    overflow: auto;
+    }
+    #notes{
+   
+    }
+    textarea, input{
+    display:block;
+    width:100%;
+    background-color: #FCF5C7;
+    }
+    input{
+    height:36px;
+    font-size: 24px;
+    }
+    textarea{
+    height:200px;
+    font-size: 18px;
+    }
+    </style>
+
+    <div id="moreSpace" class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">Rudimentary web scraper</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron">
+            <h1 class='text-center'>Hacking news.</h1>
+            <div class="container">
+              <div class='row'>
+              <div class='col-md-8'>
+                <div id="articles"></div>
+              </div>
+              <div class='col-md-4'>
+                <div id="notes"></div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="app.js"></script>
