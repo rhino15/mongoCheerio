@@ -89,8 +89,8 @@ router.post('/articles/:id', function(req, res) {
 });
 
 router.get('/delete', function(req, res) {
-	
-	Article.findOneAndRemove{"_id": req.params.id}, {'note': })
+	var note = Note()
+	Article.findOneAndRemove({"_id": req.params.id}, {'note': ""})
 	.exec(function(err, removed) {
 		if (err) {
 			throw err;
